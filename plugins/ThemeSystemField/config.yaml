@@ -1,0 +1,20 @@
+name: ThemeSystemField
+id:   ThemeSystemField
+key:  themesystemfield
+version: 1.0
+author_name: Alfasado Inc.
+author_link: http://alfasado.net/
+description: <__trans phrase="It includes Custom Fields of system scope to Theme.">
+l10n_class: ThemeSystemField::L10N
+theme_element_handlers:
+    system_fields:
+        label: Custom Fields(system)
+        importer:
+            import: $themesystemfield::ThemeSystemField::Theme::apply
+            info: $themesystemfield::ThemeSystemField::Theme::info
+        exporter:
+            params: system_fields_export_ids
+            component: ThemeSystemField
+            condition: $themesystemfield::ThemeSystemField::Theme::condition
+            template: $themesystemfield::ThemeSystemField::Theme::template
+            export: $themesystemfield::ThemeSystemField::Theme::export
